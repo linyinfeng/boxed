@@ -1,0 +1,3 @@
+# boxed
+
+A QEMU kiosk.
