@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   modulesPath,
   ...
 }:
@@ -9,6 +8,7 @@
   imports = [
     "${modulesPath}/profiles/all-hardware.nix"
   ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.grub.enable = false;
   boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.systemd-boot = {
